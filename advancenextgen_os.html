@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AdvanceNextGen OS — AI Business OS: Websites, USD Payments, Ads, Customers</title>
+    <meta name="description" content="AdvanceNextGen OS is an AI-powered business operating system. Build your website, accept USD payments with PayPal and credit/debit cards, get customers with AI-managed ads, and manage everything in one real-time dashboard.">
+    <meta name="keywords" content="AI business OS, accept USD payments, PayPal payments, credit card payments, debit card payments, business website builder, AI ad platform, all-in-one inbox, small business tools, online payment India, advance nextgen">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="AdvanceNextGen">
+    <meta name="theme-color" content="#020203">
+    <link rel="canonical" href="https://www.advancenextgen.in/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="AdvanceNextGen OS">
+    <meta property="og:title" content="AdvanceNextGen OS — AI Business OS">
+    <meta property="og:description" content="Build your website, accept USD payments with PayPal and credit/debit cards, run AI ads, and manage customers in one dashboard.">
+    <meta property="og:url" content="https://www.advancenextgen.in/">
+    <meta property="og:image" content="https://www.advancenextgen.in/og-cover.png">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AdvanceNextGen OS — AI Business OS">
+    <meta name="twitter:description" content="Accept USD payments, build your website, and grow with AI — all in one dashboard.">
+    <meta name="twitter:image" content="https://www.advancenextgen.in/og-cover.png">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23f59e0b'/%3E%3Cpath%20d='M36%2012L20%2036h10l-4%2016%2016-24H32z'%20fill='%23000'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://www.paypal.com" crossorigin>
+    <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.paypal.com">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AdvanceNextGen OS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Mobile",
+        "description": "AI-powered business operating system: website builder, USD payment acceptance via PayPal and credit/debit cards, AI ad platform, and all-in-one inbox.",
+        "offers": [
+            { "@type": "Offer", "name": "Digital Starter", "price": "18.00", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Bring Your Own Website", "price": "36.00", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "AI Autopilot", "price": "60.00", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "ADVANCE Ultimate OS", "price": "241.00", "priceCurrency": "USD" }
+        ]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- PayPal Smart Buttons (PayPal wallet, Venmo, Pay Later + Credit/Debit card) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AQeQe35XcULdb0MlggCvrLIXixc_A9ge9oTrI_i80PD-8a1K400en88O1M8WRGn5gxXNn4RKrwH7AyRo&currency=USD&intent=capture&components=buttons&enable-funding=venmo,paylater,card&disable-funding=sepa,bancontact,ideal" async></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#fffbeb', 100: '#fef3c7', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 900: '#78350f' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html, body { -webkit-tap-highlight-color: transparent; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+        .glass-panel {
+            background: rgba(10, 10, 15, 0.72);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(30, 41, 59, 0.8);
+        }
+
+        .aurora { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+        .aurora::before, .aurora::after { content: ''; position: absolute; width: 55vw; height: 55vw; border-radius: 50%; filter: blur(120px); opacity: 0.35; }
+        .aurora::before { background: radial-gradient(circle, #f59e0b, transparent 70%); top: -15%; left: -10%; animation: floatA 18s ease-in-out infinite; }
+        .aurora::after  { background: radial-gradient(circle, #2563eb, transparent 70%); bottom: -20%; right: -10%; animation: floatB 22s ease-in-out infinite; }
+        @keyframes floatA { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(8%,10%) scale(1.15); } }
+        @keyframes floatB { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-10%,-8%) scale(1.2); } }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideInUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes popIn { from { transform: scale(.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes bounceScale { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+        .animate-fade-in { animation: fadeIn .45s ease-out forwards; }
+        .animate-pop { animation: popIn .35s cubic-bezier(.2,.9,.3,1.2) forwards; }
+        .animate-slide-up { animation: slideInUp .5s ease-out forwards; }
+        .animate-bounce-scale { animation: bounceScale 1.6s infinite; }
+        .animate-spin { animation: spin 1s linear infinite; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn .4s ease-out; }
+
+        .card-lift { transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s, border-color .45s; }
+        .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 60px -20px rgba(0,0,0,.8), 0 0 0 1px rgba(251,191,36,.15); }
+
+        .gold-text { background: linear-gradient(100deg, #fff7d6, #fbbf24, #f97316, #fbbf24, #fff7d6); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 6s linear infinite; }
+        .btn-primary { position: relative; overflow: hidden; background-image: linear-gradient(100deg, #f59e0b, #f97316); transition: transform .15s ease, box-shadow .3s ease, filter .3s ease; }
+        .btn-primary:hover { filter: brightness(1.07); box-shadow: 0 12px 40px -8px rgba(245,158,11,.6); }
+        .btn-primary:active { transform: scale(.97); }
+
+        .stat-card { position: relative; overflow: hidden; }
+        .stat-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,.07) 50%, transparent 70%); transform: translateX(-100%); transition: transform .8s ease; }
+        .stat-card:hover::after { transform: translateX(100%); }
+
+        .bar { transition: height 1s cubic-bezier(.2,.8,.2,1); }
+
+        .field { width: 100%; background: #13131A; border: 1px solid #334155; border-radius: 14px; padding: 13px 16px; color: #fff; font-size: 14px; font-weight: 600; outline: none; transition: border-color .2s, box-shadow .2s; }
+        .field::placeholder { color: #64748b; font-weight: 500; }
+        .field:focus { border-color: rgba(245,158,11,.6); box-shadow: 0 0 0 4px rgba(245,158,11,.12); }
+
+        .bill-btn { flex: 1 1 0%; padding: 12px 22px; border-radius: 9999px; font-weight: 900; font-size: 12px; transition: all .3s; display: inline-flex; align-items: center; justify-content: center; }
+        @media (min-width: 768px) { .bill-btn { flex: 0 0 auto; font-size: 14px; } }
+
+        #confetti-canvas { position: fixed; inset: 0; z-index: 200; pointer-events: none; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+</head>
+<body class="bg-[#020203] text-slate-200 font-sans h-screen flex overflow-hidden selection:bg-amber-500/30 relative">
+
+    <div class="aurora"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Toast -->
+    <div id="toast-container" class="fixed top-6 md:bottom-24 left-1/2 -translate-x-1/2 md:left-auto md:right-10 bg-[#0A0A0F]/95 backdrop-blur-xl text-white px-6 py-4 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] flex items-center gap-4 z-[110] border border-slate-700 w-[90%] md:w-auto max-w-md hidden transition-all duration-300 transform translate-y-10 opacity-0">
+        <div class="bg-emerald-500/20 p-2 rounded-full border border-emerald-500/30 shrink-0">
+            <i class="ph-fill ph-check-circle text-emerald-400 text-xl"></i>
+        </div>
+        <p id="toast-message" class="font-bold text-sm leading-tight flex-1"></p>
+        <button onclick="hideToast()" class="text-slate-500 hover:text-white transition-colors shrink-0"><i class="ph ph-x text-lg"></i></button>
+    </div>
+
+    <!-- Sidebar -->
+    <aside id="sidebar" class="fixed md:static inset-y-0 left-0 z-40 w-72 bg-[#05050A] text-slate-300 transition-transform duration-300 ease-in-out -translate-x-full md:translate-x-0 flex flex-col h-screen shadow-2xl border-r border-slate-800/80">
+        <div class="flex items-center justify-between p-6 border-b border-slate-800/80 bg-[#0A0A0F]">
+            <div class="text-2xl font-black tracking-tighter text-white flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-amber-600 to-orange-700 flex items-center justify-center shadow-[0_0_15px_rgba(251,191,36,0.3)] border border-amber-300/50 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                    <i class="ph-fill ph-lightning text-black drop-shadow-md relative z-10 text-xl"></i>
+                </div>
+                <span><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-amber-500">ADVANCE</span> OS</span>
+            </div>
+            <button class="md:hidden text-slate-500 hover:text-white transition-colors bg-slate-800/50 p-2 rounded-lg" onclick="toggleSidebar()"><i class="ph ph-x"></i></button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-8 scrollbar-hide" id="sidebar-nav">
+            <div class="space-y-3">
+                <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest px-3">Start Here</p>
+                <nav class="space-y-1">
+                    <button onclick="switchTab('home')" class="nav-item" data-target="home">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-squares-four text-amber-500 text-lg"></i></div> Dashboard</div>
+                    </button>
+                    <button onclick="switchTab('launchpad')" class="nav-item" data-target="launchpad">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-rocket-launch text-amber-500 text-lg"></i></div> 1-Click Launchpad</div>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest px-3">Everyday Tools</p>
+                <nav class="space-y-1">
+                    <button onclick="switchTab('unified-inbox')" class="nav-item" data-target="unified-inbox">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-chat-circle-text text-emerald-400 text-lg"></i></div> All-in-One Inbox</div>
+                    </button>
+                    <button onclick="switchTab('universal-payment')" class="nav-item" data-target="universal-payment">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-device-mobile text-cyan-400 text-lg"></i></div> Payment Setup</div>
+                    </button>
+                    <button onclick="switchTab('transaction-ledger')" class="nav-item" data-target="transaction-ledger">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-file-xls text-green-400 text-lg"></i></div> Live Ledger</div>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest px-3">Growth &amp; Ads</p>
+                <nav class="space-y-1">
+                    <button onclick="switchTab('subscription')" class="nav-item" data-target="subscription">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-crown text-amber-400 text-lg"></i></div> Software Combos</div>
+                    </button>
+                    <button onclick="switchTab('ad-engine')" class="nav-item" data-target="ad-engine">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-target text-blue-400 text-lg"></i></div> ONE Ad Platform</div>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="space-y-3">
+                <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest px-3">Ultimate Features</p>
+                <nav class="space-y-1">
+                    <button onclick="switchTab('magic-lens')" class="nav-item" data-target="magic-lens">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-scan text-orange-400 text-lg"></i></div> Magic Scanner</div>
+                    </button>
+                    <button onclick="switchTab('voice-clone')" class="nav-item" data-target="voice-clone">
+                        <div class="flex items-center gap-3"><div class="p-2 rounded-xl"><i class="ph-fill ph-microphone-stage text-rose-400 text-lg"></i></div> AI Voice Caller</div>
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <div class="p-4 m-4 bg-[#0A0A0F] rounded-2xl border border-slate-800/80 shadow-inner">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30"><i class="ph-fill ph-user-circle text-emerald-400 text-2xl"></i></div>
+                <div>
+                    <p class="text-sm font-bold text-slate-200">System Active</p>
+                    <p class="text-[10px] font-semibold text-emerald-400 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div id="sidebar-backdrop" onclick="toggleSidebar()" class="fixed inset-0 bg-black/60 z-30 hidden md:hidden"></div>
+
+    <main class="flex-1 flex flex-col min-w-0 overflow-hidden relative z-10">
+        <header class="bg-[#05050A]/80 backdrop-blur-2xl border-b border-slate-800/80 px-4 md:px-8 py-4 flex items-center justify-between sticky top-0 z-20">
+            <div class="flex items-center gap-4 w-full max-w-2xl">
+                <button class="md:hidden text-lg font-black tracking-tighter text-white flex items-center gap-2" onclick="toggleSidebar()">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-orange-700 flex items-center justify-center"><i class="ph-fill ph-list text-black"></i></div>
+                    <span>ADVANCE</span>
+                </button>
+                <div class="hidden md:flex flex-1 items-center bg-[#0A0A0F] rounded-full px-5 py-3 border border-slate-800 focus-within:border-amber-500/50 focus-within:ring-2 focus-within:ring-amber-500/10 transition-all shadow-inner">
+                    <i class="ph ph-magnifying-glass text-slate-500 mr-3 text-lg"></i>
+                    <input type="text" placeholder="Ask AI to automate a task..." class="bg-transparent border-none focus:outline-none text-sm font-semibold w-full text-white placeholder:text-slate-600">
+                </div>
+            </div>
+            <div class="flex items-center gap-4 pl-2">
+                <button onclick="notifyBell()" class="relative text-slate-400 hover:text-white transition-colors bg-[#0A0A0F] border border-slate-800 p-2.5 rounded-full hover:bg-slate-800">
+                    <i class="ph-fill ph-bell text-lg"></i>
+                    <span id="bell-dot" class="absolute top-2 right-2 w-2 h-2 bg-amber-500 rounded-full border border-[#0A0A0F] animate-pulse"></span>
+                </button>
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-black shadow-[0_0_15px_rgba(251,191,36,0.2)] cursor-pointer hover:scale-105 active:scale-95 transition-all text-sm border border-amber-300/50">A</div>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-auto relative">
+
+            <!-- ===================== HOME DASHBOARD ===================== -->
+            <div id="home" class="tab-content active">
+                <div class="max-w-7xl mx-auto animate-fade-in px-4 md:px-0 pt-8 pb-24 md:pb-12 space-y-8">
+                    <div class="relative overflow-hidden rounded-[2.5rem] glass-panel p-8 md:p-12">
+                        <div class="absolute -top-24 -right-16 w-80 h-80 bg-amber-500/10 blur-[100px] rounded-full"></div>
+                        <div class="relative z-10">
+                            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-amber-400 mb-5">
+                                <i class="ph-fill ph-lightning"></i> Business OS · Live
+                            </div>
+                            <h1 class="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">Welcome to <span class="gold-text">Advance OS</span></h1>
+                            <p class="text-slate-400 font-medium mt-3 max-w-2xl">One dashboard to run payments, customers, ads and growth — powered by AI. Everything in real-time.</p>
+                            <div class="flex flex-wrap gap-3 mt-7">
+                                <button onclick="switchTab('subscription')" class="btn-primary text-black font-black px-6 py-3 rounded-xl flex items-center gap-2"><i class="ph-fill ph-crown"></i> Explore Plans</button>
+                                <button onclick="switchTab('launchpad')" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold px-6 py-3 rounded-xl flex items-center gap-2 transition-colors"><i class="ph-fill ph-rocket-launch text-amber-400"></i> Launch My Business</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="kpi-grid" class="grid grid-cols-2 xl:grid-cols-4 gap-4"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 glass-panel rounded-[2rem] p-6 md:p-8">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-black text-white flex items-center gap-2"><i class="ph-fill ph-chart-bar text-amber-400"></i> Revenue vs Profit</h3>
+                                <div class="flex items-center gap-4 text-[10px] font-bold uppercase tracking-widest">
+                                    <span class="flex items-center gap-1.5 text-slate-300"><span class="w-2.5 h-2.5 rounded bg-amber-500"></span> Revenue</span>
+                                    <span class="flex items-center gap-1.5 text-slate-300"><span class="w-2.5 h-2.5 rounded bg-emerald-500"></span> Profit</span>
+                                </div>
+                            </div>
+                            <div id="bar-chart" class="flex items-end justify-between gap-2 md:gap-4 h-52"></div>
+                        </div>
+                        <div class="glass-panel rounded-[2rem] p-6 md:p-8">
+                            <h3 class="text-lg font-black text-white flex items-center gap-2 mb-6"><i class="ph-fill ph-clock-countdown text-emerald-400"></i> Recent Activity</h3>
+                            <div id="recent-list" class="space-y-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== INBOX ===================== -->
+            <div id="unified-inbox" class="tab-content h-full">
+                <div class="max-w-7xl mx-auto animate-fade-in h-[85vh] md:h-[80vh] flex flex-col md:flex-row gap-6 pt-4 pb-24 md:pb-10 px-4 md:px-0">
+                    <div class="w-full md:w-[350px] glass-panel rounded-[2rem] flex flex-col overflow-hidden shadow-2xl h-[40vh] md:h-full">
+                        <div class="p-6 border-b border-slate-800 bg-[#0F0F16]">
+                            <h3 class="text-xl font-black text-white flex items-center gap-3"><div class="p-2 bg-emerald-500/20 rounded-xl border border-emerald-500/30"><i class="ph-fill ph-chat-circle-text text-emerald-400 text-xl"></i></div> All-in-One Inbox</h3>
+                            <p class="text-xs font-semibold text-slate-500 mt-2 uppercase tracking-widest">Chats &amp; Payments</p>
+                        </div>
+                        <div class="flex-1 overflow-y-auto p-3 space-y-2">
+                            <div class="p-4 rounded-2xl bg-slate-800/60 border border-slate-700 cursor-pointer shadow-inner relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 w-1 h-full bg-blue-500 group-hover:w-2 transition-all"></div>
+                                <div class="flex justify-between items-start mb-1"><span class="font-black text-white text-sm">Rahul Sharma</span><span class="text-[10px] font-bold text-slate-400">Just Now</span></div>
+                                <p class="text-xs text-emerald-400 font-medium truncate mb-3 flex items-center gap-1"><i class="ph-bold ph-checks"></i> Paid $18.00 via card</p>
+                                <span class="inline-flex items-center gap-1 text-[9px] font-black uppercase tracking-widest text-blue-400 bg-blue-900/40 px-2.5 py-1 rounded-lg border border-blue-500/30"><i class="ph-fill ph-target"></i> Came From Ad</span>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-transparent border border-transparent hover:bg-slate-800/40 cursor-pointer transition-colors">
+                                <div class="flex justify-between items-start mb-1"><span class="font-bold text-slate-300 text-sm">Priya Patel</span><span class="text-[10px] font-bold text-slate-500">Yesterday</span></div>
+                                <p class="text-xs text-slate-500 font-medium truncate mb-3">Can you send the payment link?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 glass-panel rounded-[2rem] flex flex-col overflow-hidden shadow-2xl h-[50vh] md:h-full relative">
+                        <div class="p-4 md:p-6 border-b border-slate-800 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 bg-[#0F0F16]">
+                            <div>
+                                <h3 class="text-xl font-black text-white">Rahul Sharma</h3>
+                                <p class="text-xs font-bold text-emerald-400 flex items-center gap-2 mt-1"><span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> Online now</p>
+                            </div>
+                            <button onclick="triggerSuccess('Starting new AI Ad Campaign to find customers like Rahul! 🚀')" class="px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl text-xs font-black hover:opacity-90 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 border border-blue-400/50"><i class="ph-fill ph-target text-base"></i> Get More Customers Like This</button>
+                        </div>
+                        <div class="flex-1 overflow-y-auto p-4 md:p-8 space-y-6 bg-[#05050A]">
+                            <div class="flex flex-col items-center mb-4"><span class="px-4 py-1.5 bg-slate-900 rounded-full text-[10px] text-slate-500 font-black uppercase tracking-widest border border-slate-800">Today</span></div>
+                            <div class="max-w-[85%] md:max-w-[70%] bg-slate-800 p-5 rounded-[2rem] rounded-tl-sm text-sm font-medium text-slate-200 border border-slate-700 shadow-md">Hi! I saw your ad. Are you available today to fix my shop's roof?</div>
+                            <div class="max-w-[85%] md:max-w-[70%] ml-auto bg-emerald-900/20 p-5 rounded-[2rem] rounded-tr-sm text-sm font-medium text-emerald-100 border border-emerald-500/20 shadow-md flex flex-col items-end">
+                                <span class="text-[10px] font-black text-emerald-500 flex items-center gap-1.5 mb-2 uppercase tracking-widest bg-emerald-500/10 px-2 py-1 rounded-md"><i class="ph-fill ph-robot text-sm"></i> AI Auto-Reply</span>
+                                <span class="text-right">Hello Rahul! Yes, we have a technician available. Here is the payment link for the $18.00 booking fee.</span>
+                                <div class="flex items-center gap-1.5 mt-3 text-[10px] text-emerald-500/50 font-black">Read <i class="ph-bold ph-checks text-blue-500 text-sm"></i></div>
+                            </div>
+                            <div class="flex flex-col items-center my-4 animate-slide-up"><span class="px-5 py-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 rounded-full text-xs text-emerald-400 font-black uppercase tracking-widest border border-emerald-500/30 flex items-center gap-2"><i class="ph-fill ph-shield-check text-base"></i> Payment Received: $18.00 USD</span></div>
+                        </div>
+                        <div class="p-4 md:p-6 border-t border-slate-800 bg-[#0F0F16]">
+                            <div class="bg-[#13131A] border-2 border-slate-800 rounded-2xl p-2 flex items-center gap-3 focus-within:border-emerald-500/50 transition-all">
+                                <input id="chat-input" onkeydown="if(event.key==='Enter') sendChat()" type="text" placeholder="Type a message or let our AI handle it..." class="flex-1 bg-transparent border-none text-white text-sm font-semibold px-4 focus:outline-none placeholder:text-slate-600">
+                                <button onclick="sendChat()" class="p-3 bg-emerald-500 text-black rounded-xl hover:bg-emerald-400 active:scale-95 transition-all"><i class="ph-fill ph-paper-plane-right text-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== LEDGER ===================== -->
+            <div id="transaction-ledger" class="tab-content">
+                <div class="max-w-7xl mx-auto space-y-8 animate-fade-in pt-6 pb-24 md:pb-10 px-4 md:px-0">
+                    <div class="glass-panel rounded-[2rem] p-6 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-green-500/10 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 space-y-2">
+                            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-green-400 mb-2"><i class="ph-fill ph-file-xls text-sm"></i> Database &amp; Ledger</div>
+                            <h2 class="text-3xl font-black text-white tracking-tight">Accounts: Revenue · Cost · Profit</h2>
+                            <p class="text-slate-400 text-sm font-medium">Every transaction with expenditure and net profit.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-[2rem] overflow-hidden shadow-2xl">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse min-w-[820px]">
+                                <thead>
+                                    <tr class="bg-[#0F0F16] border-b border-slate-800">
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Customer</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Plan / Item</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Date</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Amount</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Expenditure</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Profit</th>
+                                        <th class="px-6 py-4 text-xs font-black text-slate-500 uppercase tracking-widest">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ledger-body" class="divide-y divide-slate-800/50"></tbody>
+                            </table>
+                        </div>
+                        <div class="p-4 bg-[#0F0F16] border-t border-slate-800 flex justify-between items-center text-xs font-bold text-slate-500">
+                            <span id="ledger-count"></span>
+                            <button onclick="exportCsv()" class="flex items-center gap-2 hover:text-white transition-colors"><i class="ph-bold ph-download-simple"></i> Export CSV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== LAUNCHPAD ===================== -->
+            <div id="launchpad" class="tab-content">
+                <div class="max-w-4xl mx-auto space-y-10 animate-fade-in pt-12 pb-24 md:pb-10 px-4 md:px-0">
+                    <div class="text-center">
+                        <div class="inline-flex items-center justify-center w-24 h-24 rounded-[2rem] bg-[#1A1005] text-amber-500 mb-8 border border-amber-900/50 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-amber-500 rounded-[2rem] blur-xl opacity-20 animate-pulse"></div>
+                            <i class="ph-fill ph-rocket-launch text-[48px] relative z-10"></i>
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight mb-4">1-Click Launchpad</h2>
+                        <p class="text-slate-400 text-lg md:text-xl font-medium max-w-2xl mx-auto leading-relaxed">Tell the AI what you want to sell. It will build your website, setup payments, and launch your business in 60 seconds.</p>
+                    </div>
+                    <div class="glass-panel rounded-[3rem] shadow-2xl p-6 md:p-14 relative overflow-hidden">
+                        <div class="absolute -top-24 -right-24 w-72 h-72 bg-gradient-to-br from-amber-600 to-orange-600 rounded-full blur-[100px] opacity-10"></div>
+                        <div class="space-y-8 max-w-2xl mx-auto relative z-10">
+                            <div>
+                                <label class="block text-[11px] font-black text-slate-500 mb-4 uppercase tracking-widest">What is your business idea?</label>
+                                <textarea id="launch-idea" rows="4" class="field text-lg resize-none shadow-inner" placeholder="Example: I want to start a 24/7 food delivery service..."></textarea>
+                            </div>
+                            <button id="launch-btn" onclick="launchBusiness()" class="btn-primary w-full text-black font-black text-lg md:text-xl py-5 rounded-[2rem] flex items-center justify-center gap-4 disabled:opacity-75 disabled:cursor-not-allowed">
+                                <i id="launch-icon" class="ph-fill ph-magic-wand text-2xl"></i> <span id="launch-text">Launch My Business Now</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== SUBSCRIPTION ===================== -->
+            <div id="subscription" class="tab-content">
+                <div class="space-y-16 max-w-7xl mx-auto animate-fade-in pb-32 md:pb-20 pt-8">
+                    <div class="space-y-10">
+                        <div class="text-center max-w-3xl mx-auto px-4">
+                            <div class="inline-flex items-center gap-2 px-6 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-xs font-black uppercase tracking-widest mb-6 text-amber-400"><i class="ph-fill ph-crown"></i> Software OS Plans</div>
+                            <h2 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight">The <span class="gold-text">Ultimate</span> Business System</h2>
+                            <p class="text-slate-400 font-medium">Pick the plan that fits your business.</p>
+                        </div>
+
+                        <div class="flex justify-center relative z-20 px-4">
+                            <div class="bg-[#0A0A0F] p-1.5 rounded-full flex items-center shadow-[0_8px_30px_rgb(0,0,0,0.4)] border border-slate-800 w-full md:w-auto overflow-x-auto">
+                                <button onclick="setBillingCycle('1')" id="btn-bill-1" class="bill-btn">1 Month</button>
+                                <button onclick="setBillingCycle('12')" id="btn-bill-12" class="bill-btn">12 Months <span class="text-[9px] uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md ml-2">Save 20%</span></button>
+                                <button onclick="setBillingCycle('48')" id="btn-bill-48" class="bill-btn">48 Months <span class="text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 ml-2">Best</span></button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 px-4">
+                            <div class="glass-panel card-lift p-8 rounded-[2rem] shadow-xl flex flex-col">
+                                <div class="mb-8"><h3 class="text-xl font-black text-white">Digital Starter</h3><p class="text-slate-400 text-xs mt-2 font-medium">Replaces Basic Websites</p></div>
+                                <div class="text-4xl font-black text-white mb-1 tracking-tighter"><span id="price-starter">$18</span><span class="text-base text-slate-500 font-semibold tracking-normal">/mo</span></div>
+                                <p id="inr-starter" class="text-xs font-bold text-amber-400/80 mb-7">≈ ₹1,494 /mo</p>
+                                <ul class="space-y-4 flex-1 text-slate-300 text-xs font-semibold mt-2 mb-8">
+                                    <li class="flex items-center gap-3"><div class="bg-slate-800 p-1 rounded-md"><i class="ph-bold ph-checks text-slate-400"></i></div> AI Generated Website</li>
+                                    <li class="flex items-center gap-3"><div class="bg-slate-800 p-1 rounded-md"><i class="ph-bold ph-checks text-slate-400"></i></div> Free Domain (1st Year)</li>
+                                </ul>
+                                <button onclick="openCheckout('digital-starter')" class="w-full py-4 rounded-xl font-bold bg-slate-800 text-white hover:bg-slate-700 active:scale-95 transition-all border border-slate-700">Select Starter</button>
+                            </div>
+
+                            <div class="glass-panel card-lift p-8 rounded-[2rem] shadow-xl flex flex-col">
+                                <div class="mb-8"><div class="inline-block px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-black uppercase tracking-widest rounded-lg mb-4">Have a website?</div><h3 class="text-xl font-black text-white">Bring Your Own Website</h3><p class="text-slate-400 text-xs mt-2 font-medium">Add AI to your old site</p></div>
+                                <div class="text-4xl font-black text-white mb-1 tracking-tighter"><span id="price-byow">$36</span><span class="text-base text-slate-500 font-semibold tracking-normal">/mo</span></div>
+                                <p id="inr-byow" class="text-xs font-bold text-amber-400/80 mb-7">≈ ₹2,988 /mo</p>
+                                <ul class="space-y-4 flex-1 text-slate-300 text-xs font-semibold mt-2 mb-8">
+                                    <li class="flex items-center gap-3"><div class="bg-indigo-500/20 p-1 rounded-md"><i class="ph-bold ph-checks text-indigo-400"></i></div> Smart Chatbot Widget</li>
+                                    <li class="flex items-center gap-3"><div class="bg-indigo-500/20 p-1 rounded-md"><i class="ph-bold ph-checks text-indigo-400"></i></div> All-in-One Inbox</li>
+                                </ul>
+                                <button onclick="openCheckout('byow')" class="w-full py-4 rounded-xl font-bold bg-indigo-500/10 text-indigo-400 hover:bg-indigo-500/20 active:scale-95 border border-indigo-500/30 transition-all">Get My Plugin</button>
+                            </div>
+
+                            <div class="glass-panel card-lift p-8 rounded-[2rem] shadow-xl flex flex-col">
+                                <div class="mb-8"><h3 class="text-xl font-black text-white">AI Autopilot</h3><p class="text-slate-400 text-xs mt-2 font-medium">Replaces Staff &amp; Chat Tools</p></div>
+                                <div class="text-4xl font-black text-white mb-1 tracking-tighter"><span id="price-autopilot">$60</span><span class="text-base text-slate-500 font-semibold tracking-normal">/mo</span></div>
+                                <p id="inr-autopilot" class="text-xs font-bold text-amber-400/80 mb-7">≈ ₹4,980 /mo</p>
+                                <ul class="space-y-4 flex-1 text-slate-300 text-xs font-semibold mt-2 mb-8">
+                                    <li class="flex items-center gap-3"><div class="bg-emerald-500/20 p-1 rounded-md"><i class="ph-bold ph-checks text-emerald-400"></i></div> All Starter Features</li>
+                                    <li class="flex items-center gap-3"><div class="bg-emerald-500/20 p-1 rounded-md"><i class="ph-bold ph-checks text-emerald-400"></i></div> Robot Voice Caller</li>
+                                </ul>
+                                <button onclick="openCheckout('autopilot')" class="w-full py-4 rounded-xl font-bold bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 active:scale-95 border border-emerald-500/30 transition-all">Start Autopilot</button>
+                            </div>
+
+                            <div class="bg-gradient-to-b from-[#1A1500] to-[#0A0A0F] p-8 rounded-[2rem] shadow-[0_0_30px_rgba(251,191,36,0.12)] flex flex-col relative transform xl:-translate-y-4 border-2 border-amber-500/40 overflow-hidden card-lift">
+                                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-amber-400 to-orange-500 text-black text-[10px] font-black px-6 py-1.5 rounded-full tracking-widest shadow-xl uppercase whitespace-nowrap">Most Popular</div>
+                                <div class="mb-8 mt-4 relative z-10"><h3 class="text-xl font-black text-amber-400">ADVANCE Ultimate</h3><p class="text-amber-500/70 text-xs mt-2 font-medium">Software + Full Ad Budget</p></div>
+                                <div class="text-4xl font-black text-white mb-1 tracking-tighter relative z-10"><span id="price-ultimate">$241</span><span class="text-base text-slate-500 font-semibold tracking-normal">/mo</span></div>
+                                <p id="inr-ultimate" class="text-xs font-bold text-amber-400/80 mb-7 relative z-10">≈ ₹20,003 /mo</p>
+                                <ul class="space-y-4 flex-1 text-slate-200 text-xs font-semibold mt-2 mb-8 relative z-10">
+                                    <li class="flex items-center gap-3"><div class="bg-amber-500/20 p-1 rounded-md"><i class="ph-bold ph-checks text-amber-400"></i></div> <span class="text-white font-black">Top Search Engine Ads Included</span></li>
+                                    <li class="flex items-center gap-3"><div class="bg-amber-500/10 p-1 rounded-md"><i class="ph-bold ph-checks text-amber-500/70"></i></div> Premium Social Media Ads</li>
+                                </ul>
+                                <button onclick="openCheckout('ultimate')" class="btn-primary w-full py-4 rounded-xl font-black text-black relative z-10">Start Ultimate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== AD ENGINE ===================== -->
+            <div id="ad-engine" class="tab-content">
+                <div class="max-w-7xl mx-auto space-y-12 animate-fade-in pt-6 pb-32 md:pb-20 px-4 md:px-0">
+                    <div class="glass-panel rounded-[3rem] p-6 md:p-14 relative overflow-hidden shadow-2xl">
+                        <div class="absolute bottom-0 left-0 w-full h-96 bg-blue-600/5 rounded-full blur-[100px]"></div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+                            <div class="flex-1 space-y-6">
+                                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-blue-400"><i class="ph-fill ph-target"></i> The ONE Ad Platform</div>
+                                <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">Just Need Customers?<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Let AI run your Ads.</span></h2>
+                                <p class="text-slate-400 text-sm md:text-base font-medium leading-relaxed max-w-lg">Give us your budget, and our AI automatically runs your ads across Top Search Engines, Social Media, and Video Apps all at once. No jargon, just results.</p>
+                                <div class="grid grid-cols-2 gap-4 pt-4">
+                                    <div class="bg-slate-900/50 p-4 rounded-2xl border border-slate-800"><i class="ph-fill ph-globe text-blue-400 mb-2 text-2xl"></i><h4 class="text-white font-bold text-sm">All Networks</h4><p class="text-slate-500 text-xs mt-1">Search, Video, &amp; Social.</p></div>
+                                    <div class="bg-slate-900/50 p-4 rounded-2xl border border-slate-800"><i class="ph-fill ph-brain text-blue-400 mb-2 text-2xl"></i><h4 class="text-white font-bold text-sm">Auto-Designed</h4><p class="text-slate-500 text-xs mt-1">AI makes the posters for you.</p></div>
+                                </div>
+                            </div>
+                            <div class="w-full md:w-[400px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2rem] p-8 border border-slate-700 shadow-2xl">
+                                <h3 class="text-2xl font-black text-white mb-2">City Dominator</h3>
+                                <p class="text-slate-400 text-xs font-medium mb-8">Show everywhere in your city.</p>
+                                <div class="p-5 bg-slate-900/80 rounded-2xl border border-slate-700 mb-8">
+                                    <div class="text-3xl font-black text-white mb-1">$301<span class="text-sm text-slate-500 font-semibold tracking-normal">/mo</span></div>
+                                    <div class="mt-4 pt-4 border-t border-slate-800 space-y-3">
+                                        <div class="flex items-center gap-3 text-xs font-semibold text-slate-300"><i class="ph-bold ph-checks text-blue-400"></i> Search Engine Ads Included</div>
+                                        <div class="flex items-center gap-3 text-xs font-semibold text-slate-300"><i class="ph-bold ph-checks text-blue-400"></i> Social Media Ads Included</div>
+                                        <div class="flex items-center gap-3 text-xs font-bold text-white"><i class="ph-fill ph-sparkle text-blue-400"></i> 100% Managed by AI</div>
+                                    </div>
+                                </div>
+                                <button onclick="comingSoon('City Dominator Ad Plan')" class="w-full py-4 bg-blue-600 text-white rounded-xl font-black hover:bg-blue-500 active:scale-95 transition-all shadow-lg shadow-blue-900/50">Start Getting Traffic</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== PAYMENT SETUP ===================== -->
+            <div id="universal-payment" class="tab-content">
+                <div class="max-w-4xl mx-auto space-y-10 animate-fade-in pt-12 pb-24 md:pb-10 px-4 md:px-0">
+                    <div class="text-center mb-12">
+                        <div class="inline-flex items-center justify-center w-24 h-24 rounded-[2rem] bg-cyan-900/20 text-cyan-400 mb-6 border border-cyan-800/50"><i class="ph-fill ph-device-mobile text-5xl"></i></div>
+                        <h2 class="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">Easy Payment Setup</h2>
+                        <p class="text-slate-400 text-lg font-medium max-w-2xl mx-auto">Accept USD payments via PayPal, credit cards and debit cards — from customers anywhere in the world.</p>
+                    </div>
+
+                    <div class="glass-panel rounded-[3rem] overflow-hidden">
+                        <div class="p-6 md:p-12 border-b border-slate-800 bg-[#0F0F16]">
+                            <div class="flex items-center gap-4 mb-4"><span class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-600 rounded-2xl flex items-center justify-center border border-amber-500/30"><i class="ph-fill ph-currency-circle-dollar text-black text-xl"></i></span><h3 class="text-2xl font-black text-white">Live USD / INR Rate</h3></div>
+                            <p class="text-slate-400 font-medium md:ml-[64px] text-sm leading-relaxed">Your plans are priced in USD. The ₹ (INR) amount shown on the website is converted using today's exchange rate and is <span class="text-amber-400 font-bold">updated automatically every day</span>.</p>
+                        </div>
+                        <div class="p-6 md:p-12 space-y-6 bg-[#0A0A0F]">
+                            <div class="md:ml-[64px] flex flex-col sm:flex-row items-stretch gap-4">
+                                <div class="flex-1 bg-[#13131A] border border-slate-700 rounded-2xl p-5">
+                                    <p class="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-2"><i class="ph-fill ph-arrows-down-up mr-1 text-cyan-400"></i> Today's Rate</p>
+                                    <p id="fx-display" class="text-2xl font-black text-cyan-300">1 USD = ₹83.50</p>
+                                    <p id="fx-updated" class="text-[10px] font-bold text-slate-500 mt-1">Auto-updates daily</p>
+                                </div>
+                                <div class="sm:w-44">
+                                    <button onclick="refreshFx(true)" class="w-full h-full min-h-[74px] bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 border border-cyan-500/30 rounded-2xl font-black text-sm active:scale-95 transition-all flex items-center justify-center gap-2"><i class="ph ph-arrows-clockwise text-lg"></i> Update Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-[3rem] overflow-hidden">
+                        <div class="p-6 md:p-12 border-b border-slate-800 bg-[#0F0F16]">
+                            <div class="flex items-center gap-4 mb-4"><span class="w-12 h-12 bg-emerald-900 text-emerald-400 rounded-2xl flex items-center justify-center border border-emerald-500/30"><i class="ph-fill ph-bell-ringing text-xl"></i></span><h3 class="text-2xl font-black text-white">How You'll Know Someone Bought</h3></div>
+                        </div>
+                        <div class="p-6 md:p-12 space-y-5 bg-[#0A0A0F] text-sm font-medium text-slate-300">
+                            <div class="md:ml-[64px] space-y-4">
+                                <div class="flex items-start gap-3"><i class="ph-fill ph-envelope-simple text-emerald-400 mt-0.5 text-lg"></i><p>PayPal sends an <span class="text-white font-bold">email receipt to your PayPal account email</span> instantly for every sale.</p></div>
+                                <div class="flex items-start gap-3"><i class="ph-fill ph-file-xls text-emerald-400 mt-0.5 text-lg"></i><p>Every successful payment appears immediately in your <span class="text-white font-bold">Live Ledger</span> and the dashboard updates your totals.</p></div>
+                                <div class="flex items-start gap-3"><i class="ph-fill ph-bell-ringing text-emerald-400 mt-0.5 text-lg"></i><p>You'll see a <span class="text-white font-bold">new-sale notification</span> on screen with the buyer's name and amount.</p></div>
+                                <button id="simulate-sale-btn" onclick="simulateSale()" class="mt-2 inline-flex items-center gap-2 px-5 py-3 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 text-emerald-300 rounded-xl font-black text-xs uppercase tracking-widest active:scale-95 transition-all"><i class="ph-fill ph-seal-check text-base"></i> Simulate a Sale</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel rounded-[3rem] overflow-hidden">
+                        <div class="p-6 md:p-12 border-b border-slate-800 bg-[#0F0F16]">
+                            <div class="flex items-center gap-4 mb-4"><span class="w-12 h-12 bg-slate-900 text-cyan-400 rounded-2xl flex items-center justify-center border border-slate-700"><i class="ph-fill ph-device-mobile text-xl"></i></span><h3 class="text-2xl font-black text-white">Quick App Setup</h3></div>
+                            <p class="text-slate-400 font-medium md:ml-[64px] text-sm leading-relaxed">Type your mobile number below to create local payment codes for backup collection.</p>
+                        </div>
+                        <div class="p-6 md:p-12 space-y-6 bg-[#0A0A0F]">
+                            <div class="md:ml-[64px]"><input id="upi-input" type="text" class="field text-lg" placeholder="Example: 9876543210 or yourname@upi"></div>
+                            <div class="md:ml-[64px]"><button onclick="createPaymentCodes()" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-black py-4 rounded-[2rem] active:scale-95 transition-all text-base shadow-[0_0_20px_rgba(8,145,178,0.3)]">Create My Payment Codes</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== GENERIC PLACEHOLDER ===================== -->
+            <div id="generic-tab" class="tab-content">
+                <div class="flex flex-col items-center justify-center h-[60vh] text-slate-400 animate-fade-in px-4 text-center">
+                    <div class="w-24 h-24 bg-[#0A0A0F] shadow-2xl border border-slate-800 rounded-full flex items-center justify-center mb-6 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-blue-500/10 animate-spin"></div>
+                        <i id="generic-icon" class="ph-fill ph-stack text-slate-500 text-4xl relative z-10"></i>
+                    </div>
+                    <h2 id="generic-title" class="text-3xl font-black text-white mb-4 tracking-tight">MODULE</h2>
+                    <p class="text-slate-500 text-sm font-medium max-w-md">This luxury module is active and will load fully in a moment.</p>
+                    <button onclick="switchTab('subscription')" class="mt-8 px-8 py-4 bg-slate-800 border border-slate-700 text-white rounded-2xl font-bold hover:bg-slate-700 active:scale-95 transition-all text-sm">Go to Plans</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile nav -->
+        <div class="md:hidden fixed bottom-0 left-0 w-full bg-[#0A0A0F]/95 backdrop-blur-xl border-t border-slate-800/80 z-50 px-4 py-3 flex justify-between items-center pb-safe">
+            <button onclick="switchTab('home')" class="mobile-nav-item" data-target="home"><div class="p-2 rounded-full"><i class="ph-fill ph-squares-four text-xl"></i></div></button>
+            <button onclick="switchTab('unified-inbox')" class="mobile-nav-item" data-target="unified-inbox"><div class="p-2 rounded-full"><i class="ph-fill ph-chat-circle-text text-xl"></i></div></button>
+            <button onclick="switchTab('launchpad')" class="mobile-nav-item" data-target="launchpad"><div class="p-2 rounded-full"><i class="ph-fill ph-rocket-launch text-xl"></i></div></button>
+            <button onclick="switchTab('transaction-ledger')" class="mobile-nav-item" data-target="transaction-ledger"><div class="p-2 rounded-full"><i class="ph-fill ph-file-xls text-xl"></i></div></button>
+            <button onclick="switchTab('subscription')" class="mobile-nav-item" data-target="subscription"><div class="p-2 rounded-full"><i class="ph-fill ph-crown text-xl"></i></div></button>
+        </div>
+    </main>
+
+    <!-- ===================== PAYPAL CHECKOUT MODAL ===================== -->
+    <div id="checkout-modal" onclick="if(event.target===this) closeCheckout()" class="fixed inset-0 z-[130] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
+        <div class="glass-panel w-full max-w-md rounded-[2rem] p-6 md:p-8 relative animate-pop max-h-[92vh] overflow-y-auto">
+            <button onclick="closeCheckout()" class="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors bg-slate-800/60 p-2 rounded-lg"><i class="ph ph-x text-lg"></i></button>
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-500/10 border border-amber-500/20 rounded-full text-[10px] font-black uppercase tracking-widest text-amber-400 mb-4"><i class="ph-fill ph-lock-key"></i> Secure Checkout</div>
+                <h3 id="checkout-plan" class="text-2xl font-black text-white">Plan</h3>
+                <p id="checkout-price" class="text-4xl font-black gold-text mt-2 tracking-tighter">$0.00</p>
+                <p id="checkout-inr" class="text-xs font-bold text-slate-400 mt-1 uppercase tracking-widest">≈ ₹0 · USD Only</p>
+                <p id="checkout-term" class="text-[10px] font-black text-amber-400/80 mt-1 uppercase tracking-widest">12 Months</p>
+            </div>
+            <div class="text-center mb-2"><i class="ph-fill ph-wallet text-3xl text-sky-400"></i></div>
+            <div id="paypal-button-container" class="min-h-[120px]"></div>
+            <div class="flex items-center gap-3 my-3">
+                <div class="flex-1 h-px bg-slate-800"></div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">or pay with card</span>
+                <div class="flex-1 h-px bg-slate-800"></div>
+            </div>
+            <div id="paypal-card-container" class="min-h-[55px]"></div>
+            <p id="paypal-card-note" class="text-center text-[11px] font-bold text-cyan-400/90 mt-2"><i class="ph-fill ph-credit-card mr-1"></i>Credit / Debit Card — also available inside the PayPal window above.</p>
+            <div class="mt-6 pt-6 border-t border-slate-800 flex items-center justify-center gap-4 text-slate-500">
+                <span class="text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5"><i class="ph-fill ph-credit-card text-base"></i> Credit / Debit Card</span>
+                <span class="text-[10px] font-black uppercase tracking-widest flex items-center gap-1.5"><i class="ph-fill ph-wallet text-base"></i> PayPal &amp; Wallets</span>
+            </div>
+            <p class="text-center text-[10px] text-slate-600 font-medium mt-4">Payments are processed securely by PayPal. We never see or store your card details.</p>
+        </div>
+    </div>
+
+    <script>
+    /* ================================================================
+       AdvanceNextGen OS  —  front-end + PayPal checkout
+       ================================================================ */
+
+    const PLANS = {
+        'digital-starter': { name: 'Digital Starter',        prices: { '1': 30,  '12': 18,  '48': 12  } },
+        'byow':            { name: 'Bring Your Own Website', prices: { '1': 48,  '12': 36,  '48': 24  } },
+        'autopilot':       { name: 'AI Autopilot',           prices: { '1': 96,  '12': 60,  '48': 42  } },
+        'ultimate':        { name: 'ADVANCE Ultimate OS',    prices: { '1': 301, '12': 241, '48': 217 } }
+    };
+
+    const TAB_TITLES = {
+        'home': { title: 'DASHBOARD', icon: 'ph-squares-four' },
+        'unified-inbox': { title: 'ALL-IN-ONE INBOX', icon: 'ph-chat-circle-text' },
+        'transaction-ledger': { title: 'LIVE LEDGER', icon: 'ph-file-xls' },
+        'launchpad': { title: '1-CLICK LAUNCHPAD', icon: 'ph-rocket-launch' },
+        'subscription': { title: 'SOFTWARE PLANS', icon: 'ph-crown' },
+        'ad-engine': { title: 'ONE AD PLATFORM', icon: 'ph-target' },
+        'universal-payment': { title: 'PAYMENT SETUP', icon: 'ph-device-mobile' },
+        'magic-lens': { title: 'MAGIC SCANNER', icon: 'ph-scan' },
+        'voice-clone': { title: 'AI VOICE CALLER', icon: 'ph-microphone-stage' }
+    };
+
+    const state = { cycle: '12', generating: false };
+    const CYCLE_LABEL = { '1': '1 Month', '12': '12 Months', '48': '48 Months' };
+
+    /* ---------------- Currency + daily USD/INR rate ---------------- */
+    const usd = n => '$' + Number(n).toLocaleString('en-US', { maximumFractionDigits: 0 });
+    const usd2 = n => '$' + Number(n).toFixed(2);
+    const inr = n => '₹' + Number(n).toLocaleString('en-IN');
+    const todayStr = () => {
+        const d = new Date();
+        return [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-');
+    };
+
+    const FX_STORE_KEY = 'ang_fx_v1';
+    const FX_FALLBACK = 83.5;
+    const PRICE_EL = { 'digital-starter': 'starter', 'byow': 'byow', 'autopilot': 'autopilot', 'ultimate': 'ultimate' };
+    let FX = { rate: FX_FALLBACK, date: '', source: 'default' };
+
+    function loadFx() {
+        try {
+            const raw = localStorage.getItem(FX_STORE_KEY);
+            if (raw) {
+                const d = JSON.parse(raw);
+                if (d && d.rate > 10) return d;
+            }
+        } catch (e) {}
+        return { rate: FX_FALLBACK, date: '', source: 'default' };
+    }
+
+    function saveFx(fx) { try { localStorage.setItem(FX_STORE_KEY, JSON.stringify(fx)); } catch (e) {} }
+
+    async function refreshFx(force) {
+        const cur = loadFx();
+        if (!force && cur.date === todayStr()) { applyFx(cur); return cur; }
+        const fallback = { rate: FX_FALLBACK, date: todayStr(), source: 'fallback' };
+        try {
+            const res = await fetch('https://open.er-api.com/v6/latest/USD');
+            if (res.ok) {
+                const j = await res.json();
+                const rate = j && j.rates && j.rates.INR;
+                if (rate && rate > 10) {
+                    const next = { rate: Math.round(rate * 100) / 100, date: todayStr(), source: 'live' };
+                    saveFx(next);
+                    applyFx(next);
+                    return next;
+                }
+            }
+        } catch (e) {}
+        saveFx(fallback);
+        applyFx(fallback);
+        return fallback;
+    }
+
+    function applyFx(fx) {
+        FX = fx;
+        const el = document.getElementById('fx-display');
+        const up = document.getElementById('fx-updated');
+        if (el) el.innerText = '1 USD = ₹' + FX.rate.toFixed(2);
+        if (up) up.innerText = (FX.source === 'live' ? 'Live rate · updated ' : 'Rate · updated ') + todayStr();
+        setBillingCycle(state.cycle);
+        document.title = document.title;
+    }
+
+    /* ---------------- Navigation ---------------- */
+    function switchTab(targetId) {
+        let tab = document.getElementById(targetId);
+        if (!tab) {
+            tab = document.getElementById('generic-tab');
+            const meta = TAB_TITLES[targetId] || { title: targetId.replace(/-/g, ' ').toUpperCase(), icon: 'ph-stack' };
+            document.getElementById('generic-title').innerText = meta.title;
+            document.getElementById('generic-icon').className = 'ph-fill ' + meta.icon + ' text-slate-500 text-4xl relative z-10';
+        }
+
+        document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+        tab.classList.add('active');
+
+        document.querySelectorAll('.nav-item').forEach(el => paintNav(el, el.dataset.target === targetId, true));
+        document.querySelectorAll('.mobile-nav-item').forEach(el => paintNav(el, el.dataset.target === targetId, false));
+
+        if (window.innerWidth < 768) closeSidebar();
+        document.querySelector('main .flex-1').scrollTop = 0;
+    }
+    function paintNav(el, active, desktop) {
+        if (desktop) {
+            el.className = 'nav-item w-full flex items-center justify-between px-3 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 group ' +
+                (active ? 'bg-gradient-to-r from-amber-500/10 to-transparent text-amber-400 shadow-sm border border-amber-500/20'
+                        : 'hover:bg-slate-800/50 text-slate-400 hover:text-slate-200 border border-transparent');
+            const box = el.querySelector('div.p-2');
+            if (box) box.className = 'p-2 rounded-xl transition-all duration-300 ' + (active ? 'bg-amber-500/20 shadow-inner' : 'bg-slate-900 group-hover:bg-slate-800 border border-slate-800');
+            if (active) { if (!el.querySelector('.dot')) el.insertAdjacentHTML('beforeend', '<div class="dot w-1.5 h-1.5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(251,191,36,1)]"></div>'); }
+            else { const d = el.querySelector('.dot'); if (d) d.remove(); }
+        } else {
+            el.className = 'mobile-nav-item flex flex-col items-center gap-1 transition-all duration-300 ' + (active ? 'text-amber-400 scale-110' : 'text-slate-500 hover:text-slate-300');
+            const box = el.querySelector('div');
+            if (box) box.className = 'p-2 rounded-full ' + (active ? 'bg-amber-500/20' : 'bg-transparent');
+        }
+    }
+    function openSidebar() { document.getElementById('sidebar').classList.remove('-translate-x-full'); document.getElementById('sidebar-backdrop').classList.remove('hidden'); }
+    function closeSidebar() { document.getElementById('sidebar').classList.add('-translate-x-full'); document.getElementById('sidebar-backdrop').classList.add('hidden'); }
+    function toggleSidebar() { document.getElementById('sidebar').classList.contains('-translate-x-full') ? openSidebar() : closeSidebar(); }
+
+    /* ---------------- Toast + confetti ---------------- */
+    let toastTimeout;
+    function showToast(msg) {
+        const toast = document.getElementById('toast-container');
+        document.getElementById('toast-message').innerText = msg;
+        toast.classList.remove('hidden');
+        requestAnimationFrame(() => toast.classList.remove('translate-y-10', 'opacity-0'));
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(hideToast, 4200);
+    }
+    function hideToast() {
+        const toast = document.getElementById('toast-container');
+        toast.classList.add('translate-y-10', 'opacity-0');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+    }
+    function triggerSuccess(msg, confetti) {
+        showToast(msg);
+        if (navigator.vibrate) { try { navigator.vibrate([100, 50, 100]); } catch (e) {} }
+        if (confetti) burstConfetti();
+    }
+    function comingSoon(plan) { triggerSuccess((plan || 'This feature') + ' — coming soon! 🚀'); }
+
+    const cvs = document.getElementById('confetti-canvas');
+    const ctx = cvs.getContext('2d');
+    let parts = [], raf = null;
+    function resizeCanvas() { cvs.width = innerWidth; cvs.height = innerHeight; }
+    addEventListener('resize', resizeCanvas); resizeCanvas();
+    function burstConfetti() {
+        const colors = ['#f59e0b', '#10b981', '#3b82f6', '#ef4444', '#a855f7', '#fbbf24'];
+        for (let i = 0; i < 120; i++) parts.push({ x: innerWidth / 2 + (Math.random() - .5) * 200, y: innerHeight / 2 - 60, vx: (Math.random() - .5) * 12, vy: Math.random() * -12 - 4, s: Math.random() * 8 + 4, c: colors[i % colors.length], a: 1 });
+        if (!raf) loop();
+    }
+    function loop() {
+        ctx.clearRect(0, 0, cvs.width, cvs.height);
+        parts.forEach(p => { p.vy += .35; p.x += p.vx; p.y += p.vy; p.a -= .012; ctx.globalAlpha = Math.max(p.a, 0); ctx.fillStyle = p.c; ctx.fillRect(p.x, p.y, p.s, p.s); });
+        parts = parts.filter(p => p.a > 0 && p.y < cvs.height + 40);
+        if (parts.length) raf = requestAnimationFrame(loop); else { raf = null; ctx.clearRect(0, 0, cvs.width, cvs.height); }
+    }
+
+    /* ---------------- Data: ledger + KPIs + chart ---------------- */
+    const SALES_KEY = 'ang_sales_v1';
+    const SAMPLES = [
+        { name: 'Rahul Sharma', plan: 'AI Autopilot Plan',      date: 'Oct 10, 2026', time: '14:32', amount: 60,  cost: 22, status: 'Success' },
+        { name: 'Priya Patel',  plan: 'Digital Starter Plan',   date: 'Oct 09, 2026', time: '11:15', amount: 18,  cost: 6,  status: 'Success' },
+        { name: 'Amit Singh',   plan: 'Ultimate Platform',      date: 'Oct 08, 2026', time: '09:45', amount: 241, cost: 90, status: 'Success' },
+        { name: 'Neha Gupta',   plan: 'AI Voice Add-on',        date: 'Oct 08, 2026', time: '16:20', amount: 24,  cost: 10, status: 'Success' },
+        { name: 'Vikram Joshi', plan: 'Bring Your Own Website', date: 'Oct 07, 2026', time: '10:05', amount: 36,  cost: 14, status: 'Pending' }
+    ];
+    let SALES = loadSales();
+    function loadSales() { try { return JSON.parse(localStorage.getItem(SALES_KEY)) || []; } catch (e) { return []; } }
+    function saveSales() { try { localStorage.setItem(SALES_KEY, JSON.stringify(SALES)); } catch (e) {} }
+    const allTxns = () => [...SALES, ...SAMPLES];
+    const profitOf = t => t.amount - t.cost;
+
+    function renderLedger() {
+        const body = document.getElementById('ledger-body');
+        body.innerHTML = allTxns().map(tx => {
+            const ok = tx.status === 'Success';
+            const badge = ok ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-amber-500/10 text-amber-400 border-amber-500/20';
+            const ic = ok ? 'ph-check-circle' : 'ph-clock';
+            return `<tr class="hover:bg-slate-800/40 transition-colors">
+                <td class="px-6 py-5"><div class="font-bold text-white text-sm">${tx.name}</div></td>
+                <td class="px-6 py-5"><div class="inline-flex items-center gap-2 text-xs font-bold text-slate-300 bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-700/50">${tx.plan}</div></td>
+                <td class="px-6 py-5"><div class="text-sm font-medium text-slate-400">${tx.date}</div><div class="text-[10px] font-bold text-slate-500">${tx.time}</div></td>
+                <td class="px-6 py-5"><div class="font-black text-white text-sm">${usd(tx.amount)}</div></td>
+                <td class="px-6 py-5"><div class="font-bold text-red-300/90 text-sm">− ${usd(tx.cost)}</div></td>
+                <td class="px-6 py-5"><div class="font-black text-emerald-400 text-sm">+ ${usd(profitOf(tx))}</div></td>
+                <td class="px-6 py-5"><span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${badge}"><i class="ph-fill ${ic}"></i> ${tx.status}</span></td>
+            </tr>`;
+        }).join('');
+        const done = allTxns().filter(t => t.status === 'Success');
+        document.getElementById('ledger-count').innerText = `Showing ${allTxns().length} of ${allTxns().length} transactions · ${done.length} settled`;
+    }
+
+    function renderKpis() {
+        const paid = allTxns().filter(t => t.status === 'Success');
+        const revenue = paid.reduce((s, t) => s + t.amount, 0);
+        const cost = paid.reduce((s, t) => s + t.cost, 0);
+        const profit = revenue - cost;
+        const cards = [
+            { label: 'Total Revenue', value: usd(revenue), icon: 'ph-currency-dollar', tone: 'amber', sub: 'Paid transactions' },
+            { label: 'Expenditure', value: usd(cost), icon: 'ph-receipt', tone: 'red', sub: 'Cost of delivery' },
+            { label: 'Net Profit', value: usd(profit), icon: 'ph-trend-up', tone: 'emerald', sub: 'After all costs' },
+            { label: 'Transactions', value: String(allTxns().length), icon: 'ph-arrows-left-right', tone: 'blue', sub: `${paid.length} settled` }
+        ];
+        const tones = { amber: 'from-amber-500/20 text-amber-400', red: 'from-red-500/20 text-red-400', emerald: 'from-emerald-500/20 text-emerald-400', blue: 'from-blue-500/20 text-blue-400' };
+        document.getElementById('kpi-grid').innerHTML = cards.map(c => `
+            <div class="stat-card glass-panel rounded-2xl p-5 md:p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br ${tones[c.tone]} to-transparent border border-slate-700/50 flex items-center justify-center"><i class="ph-fill ${c.icon} text-xl"></i></div>
+                    <span class="text-[9px] font-black uppercase tracking-widest text-slate-500">${c.sub}</span>
+                </div>
+                <p class="text-2xl md:text-3xl font-black text-white tracking-tight" data-count="${c.value}">0</p>
+                <p class="text-xs font-bold text-slate-400 mt-1 uppercase tracking-widest">${c.label}</p>
+            </div>`).join('');
+        document.querySelectorAll('#kpi-grid [data-count]').forEach(el => {
+            const raw = el.dataset.count;
+            if (raw.startsWith('$')) animateNumber(el, Number(raw.replace(/[^0-9]/g, '')), v => '$' + v.toLocaleString('en-US'));
+            else animateNumber(el, Number(raw), v => String(v));
+        });
+    }
+    function animateNumber(el, to, fmt) {
+        const start = performance.now(), dur = 900;
+        (function tick(now) {
+            const p = Math.min((now - start) / dur, 1);
+            el.innerText = fmt(Math.floor(to * (1 - Math.pow(1 - p, 3))));
+            if (p < 1) requestAnimationFrame(tick);
+        })(start);
+    }
+
+    const CHART = [
+        { d: 'Mon', rev: 3200, prof: 2100 }, { d: 'Tue', rev: 4800, prof: 3100 },
+        { d: 'Wed', rev: 2600, prof: 1700 }, { d: 'Thu', rev: 6100, prof: 4200 },
+        { d: 'Fri', rev: 5400, prof: 3600 }, { d: 'Sat', rev: 8200, prof: 5900 },
+        { d: 'Sun', rev: 6700, prof: 4600 }
+    ];
+    function renderChart() {
+        const max = Math.max(...CHART.map(c => c.rev));
+        document.getElementById('bar-chart').innerHTML = CHART.map(c => `
+            <div class="flex-1 flex flex-col items-center gap-3 h-full justify-end">
+                <div class="flex items-end gap-1 md:gap-1.5 w-full justify-center h-full">
+                    <div class="bar w-3 md:w-5 rounded-t-lg bg-gradient-to-t from-amber-600 to-amber-400" style="height:${(c.rev / max) * 100}%" title="Revenue ${usd(c.rev)}"></div>
+                    <div class="bar w-3 md:w-5 rounded-t-lg bg-gradient-to-t from-emerald-600 to-emerald-400" style="height:${(c.prof / max) * 100}%" title="Profit ${usd(c.prof)}"></div>
+                </div>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">${c.d}</span>
+            </div>`).join('');
+    }
+    function renderRecent() {
+        document.getElementById('recent-list').innerHTML = allTxns().slice(0, 5).map(t => `
+            <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-slate-800/40 transition-colors">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-xs font-black text-white border border-slate-700">${t.name.charAt(0)}</div>
+                <div class="flex-1 min-w-0"><p class="text-sm font-bold text-white truncate">${t.name}</p><p class="text-[10px] text-slate-500 font-semibold truncate">${t.plan}</p></div>
+                <div class="text-right"><p class="text-sm font-black text-emerald-400">${usd(t.amount)}</p><p class="text-[9px] font-bold ${t.status === 'Success' ? 'text-emerald-500/70' : 'text-amber-500/70'}">${t.status}</p></div>
+            </div>`).join('');
+    }
+
+    function exportCsv() {
+        const header = ['Customer', 'Plan', 'Date', 'Time', 'Amount (USD)', 'Expenditure (USD)', 'Profit (USD)', 'Status'];
+        const rows = allTxns().map(t => [t.name, t.plan, t.date, t.time, '$' + t.amount.toFixed(2), '$' + t.cost.toFixed(2), '$' + profitOf(t).toFixed(2), t.status]);
+        const csv = [header, ...rows].map(r => r.map(v => `"${v}"`).join(',')).join('\n');
+        const url = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+        const a = document.createElement('a'); a.href = url; a.download = 'advance-os-ledger.csv'; a.click(); URL.revokeObjectURL(url);
+        triggerSuccess('Ledger exported to CSV 📄');
+    }
+
+    /* ---------------- Billing cycle ---------------- */
+    function setBillingCycle(c) {
+        state.cycle = c;
+        Object.keys(PRICE_EL).forEach(id => {
+            const usdPrice = PLANS[id].prices[c];
+            document.getElementById('price-' + PRICE_EL[id]).innerText = '$' + usdPrice;
+            document.getElementById('inr-' + PRICE_EL[id]).innerText = '≈ ' + inr(Math.round(usdPrice * FX.rate)) + ' /mo';
+        });
+        ['1', '12', '48'].forEach(x => {
+            const b = document.getElementById('btn-bill-' + x);
+            b.className = 'bill-btn whitespace-nowrap ' + (x === c
+                ? (x === '48' ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-black shadow-lg border border-amber-400' : 'bg-slate-800 text-white shadow-md border border-slate-700')
+                : 'text-slate-500 hover:text-slate-300');
+        });
+    }
+
+    /* ---------------- PayPal Checkout (USD only) ---------------- */
+    function freshContainer(id) {
+        const old = document.getElementById(id);
+        const div = document.createElement('div');
+        div.id = id;
+        div.className = old.className;
+        old.parentNode.replaceChild(div, old);
+        return div;
+    }
+
+    function openCheckout(planId) {
+        const plan = PLANS[planId];
+        if (!plan) return;
+        const usdPrice = plan.prices[state.cycle];
+        const usdStr = Number(usdPrice).toFixed(2);
+
+        document.getElementById('checkout-plan').innerText = plan.name;
+        document.getElementById('checkout-price').innerText = '$' + usdStr;
+        document.getElementById('checkout-inr').innerText = '≈ ' + inr(Math.round(usdPrice * FX.rate)) + ' · USD Only';
+        document.getElementById('checkout-term').innerText = CYCLE_LABEL[state.cycle];
+
+        const modal = document.getElementById('checkout-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        renderPaypalButtons(usdStr, plan.name + ' — ' + CYCLE_LABEL[state.cycle]);
+    }
+
+    function closeCheckout() {
+        const modal = document.getElementById('checkout-modal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        const c = document.getElementById('paypal-button-container');
+        const c2 = document.getElementById('paypal-card-container');
+        if (c) c.innerHTML = '';
+        if (c2) c2.innerHTML = '';
+    }
+
+    function renderPaypalButtons(usdStr, description, tries) {
+        tries = tries || 0;
+        const main = freshContainer('paypal-button-container');
+        const card = freshContainer('paypal-card-container');
+
+        if (!window.paypal) {
+            if (tries < 40) {
+                const load = '<div class="text-center text-xs font-bold text-slate-400 py-6"><i class="ph ph-circle-notch animate-spin text-2xl block mb-2 text-amber-400"></i>Loading secure checkout…</div>';
+                main.innerHTML = load;
+                card.innerHTML = '';
+                setTimeout(() => {
+                    if (!document.getElementById('checkout-modal').classList.contains('hidden')) renderPaypalButtons(usdStr, description, tries + 1);
+                }, 300);
+            } else {
+                main.innerHTML = '<div class="text-center text-sm font-semibold text-amber-400 p-4">Could not load PayPal. Please check your connection and try again.</div>';
+            }
+            return;
+        }
+
+        const order = {
+            intent: 'CAPTURE',
+            purchase_units: [{
+                description: description.slice(0, 127),
+                amount: { currency_code: 'USD', value: usdStr }
+            }],
+            application_context: { shipping_preference: 'NO_SHIPPING', user_action: 'PAY_NOW' }
+        };
+
+        paypal.Buttons({
+            style: { layout: 'vertical', shape: 'pill', color: 'gold', label: 'paypal', height: 45 },
+            createOrder: function (data, actions) { return actions.order.create(order); },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) { finalizePayment(details, description, usdStr); });
+            },
+            onError: function (err) { console.error('PayPal error:', err); triggerSuccess('Payment could not be completed. Please try again.'); },
+            onCancel: function () { triggerSuccess('Checkout cancelled. No charge was made.'); }
+        }).render('#paypal-button-container');
+
+        if (paypal.FUNDING && paypal.FUNDING.CARD) {
+            paypal.Buttons({
+                fundingSource: paypal.FUNDING.CARD,
+                style: { layout: 'vertical', shape: 'pill', color: 'white', label: 'card', height: 45 },
+                createOrder: function (data, actions) { return actions.order.create(order); },
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) { finalizePayment(details, description, usdStr); });
+                },
+                onError: function (err) { console.error('Card error:', err); triggerSuccess('Card payment could not be completed. Please try again.'); },
+                onCancel: function () { triggerSuccess('Checkout cancelled. No charge was made.'); }
+            }).render('#paypal-card-container');
+        }
+    }
+
+    function finalizePayment(details, description, usdStr) {
+        const payer = details && details.payer && details.payer.name;
+        const who = payer ? ((payer.given_name || '') + ' ' + (payer.surname || '')).trim() : '';
+        const planName = description.split('—')[0].trim();
+        const amountUsd = Number(usdStr);
+        closeCheckout();
+        addPaidTransaction(who || 'PayPal Customer', planName, amountUsd);
+        playChime();
+        triggerSuccess('Payment confirmed · ' + usd2(amountUsd) + (who ? ' from ' + who + '!' : ' received!') + ' 🎉', true);
+    }
+
+    function playChime() {
+        try {
+            const AC = window.AudioContext || window.webkitAudioContext;
+            const ac = new AC();
+            [523.25, 659.25, 783.99].forEach((f, i) => {
+                const o = ac.createOscillator(), g = ac.createGain();
+                o.type = 'sine'; o.frequency.value = f;
+                o.connect(g); g.connect(ac.destination);
+                const t = ac.currentTime + i * 0.15;
+                g.gain.setValueAtTime(0.0001, t);
+                g.gain.exponentialRampToValueAtTime(0.18, t + 0.03);
+                g.gain.exponentialRampToValueAtTime(0.0001, t + 0.5);
+                o.start(t); o.stop(t + 0.55);
+            });
+        } catch (e) {}
+    }
+
+    let newSinceLoad = false;
+    function addPaidTransaction(name, planName, amountUsd) {
+        const now = new Date();
+        SALES.unshift({
+            name: name,
+            plan: planName,
+            date: now.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' }),
+            time: now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }),
+            amount: Math.round(amountUsd * 100) / 100,
+            cost: Math.round(amountUsd * 0.35 * 100) / 100,
+            status: 'Success'
+        });
+        saveSales();
+        renderLedger();
+        renderKpis();
+        renderRecent();
+        newSinceLoad = true;
+        const dot = document.getElementById('bell-dot');
+        if (dot) dot.className = 'absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-[#0A0A0F] animate-ping';
+    }
+
+    function simulateSale() {
+        const names = ['Sara Khan', 'David Miller', 'Chen Wei', 'Amelia Smith', 'Diego Lopez', 'Ananya Rao'];
+        const picks = PLANS[['digital-starter', 'byow', 'autopilot', 'ultimate'][Math.floor(Math.random() * 4)]];
+        const usdPrice = picks.prices[state.cycle];
+        addPaidTransaction(names[Math.floor(Math.random() * names.length)], picks.name, usdPrice);
+        playChime();
+        triggerSuccess('Test sale added: ' + usd2(usdPrice) + ' · ' + picks.name + ' ✅', true);
+    }
+
+    function notifyBell() {
+        const ok = allTxns().filter(t => t.status === 'Success');
+        const amt = ok.reduce((s, t) => s + t.amount, 0);
+        triggerSuccess('You have ' + ok.length + ' successful sales · Total ' + usd(amt) + (newSinceLoad ? ' · NEW SALE just arrived! 🚀' : ' ⚡'), newSinceLoad);
+        newSinceLoad = false;
+        const dot = document.getElementById('bell-dot');
+        if (dot) dot.className = 'absolute top-2 right-2 w-2 h-2 bg-amber-500 rounded-full border border-[#0A0A0F] animate-pulse';
+    }
+
+    /* ---------------- Misc actions ---------------- */
+    function sendChat() {
+        const input = document.getElementById('chat-input');
+        const v = input.value.trim();
+        input.value = '';
+        triggerSuccess(v ? 'Message sent. AI is handling it ✨' : 'Our AI is drafting a smart reply 🤖');
+    }
+    function launchBusiness() {
+        if (state.generating) return;
+        state.generating = true;
+        const btn = document.getElementById('launch-btn'), icon = document.getElementById('launch-icon'), text = document.getElementById('launch-text');
+        btn.disabled = true; icon.className = 'ph-fill ph-lightning text-2xl animate-bounce'; text.innerText = 'Building Business...';
+        triggerSuccess('AI is building your business now! 🚀');
+        setTimeout(() => { state.generating = false; btn.disabled = false; icon.className = 'ph-fill ph-magic-wand text-2xl'; text.innerText = 'Launch My Business Now'; triggerSuccess('Your business is live! 🎉', true); }, 3000);
+    }
+    function createPaymentCodes() {
+        const v = document.getElementById('upi-input').value.trim();
+        triggerSuccess(v ? 'Payment Codes are live! 💰' : 'Enter your mobile number or UPI ID first 💰');
+    }
+
+    /* ---------------- Init ---------------- */
+    renderLedger();
+    renderKpis();
+    renderChart();
+    renderRecent();
+    setBillingCycle('12');
+    switchTab('home');
+    refreshFx(false);
+    setInterval(() => {
+        if (!loadFx().date || loadFx().date !== todayStr()) refreshFx(true);
+    }, 60 * 60 * 1000);
+    setTimeout(() => triggerSuccess('Welcome! Accept USD with PayPal, cards &amp; wallets. 🚀'), 2500);
+    </script>
+</body>
+</html>
